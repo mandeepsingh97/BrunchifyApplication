@@ -1,0 +1,52 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundfinal"
+    tools:context="Fragments.SelectNeighbourhood">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/neighbourhood_img"
+            android:layout_width="600dp"
+            android:layout_height="300dp"
+            android:src="@drawable/ic_map_location" />
+
+        <TextView
+            android:id="@+id/neighbourhood_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/neighbourhood_img"
+            android:layout_marginVertical="16dp"
+            android:layout_marginTop="-47dp"
+            android:fontFamily="@font/avenir"
+            android:src="@drawable/text_logo"
+            android:text="Which neighbourhoods \n can you meet in?"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlackdark"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/neighbourhood_spinner"
+            android:background="@drawable/bg_spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/neighbourhood_text"
+            android:layout_marginHorizontal="24dp"
+            android:prompt="@string/city_prompt" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_neighbourhood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/neighbourhood_spinner"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="28dp"></androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+
+</FrameLayout>

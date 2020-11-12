@@ -1,0 +1,41 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundfinal"
+    tools:context="Fragments.SelectObjectives">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/obj_img"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/ic_task" />
+
+        <TextView
+            android:id="@+id/obj_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/obj_img"
+            android:layout_marginTop="48dp"
+            android:fontFamily="@font/avenir"
+            android:text="Select Your Objectives"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlackdark"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_obj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/obj_text"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="43dp"></androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+</FrameLayout>
